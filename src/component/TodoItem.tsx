@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react'
+import React, {FC} from 'react'
 
 interface TodoItemProps {
     id: number
@@ -11,11 +11,11 @@ interface TodoItemProps {
 const TodoItem: FC<TodoItemProps> = ({id, title, completed, toggleTodo, deleteTodo}) => {
     return (
         <li>
-            <label htmlFor="">
+            <label>
                 <input
                     type="checkbox"
-                    checked={completed}
-                    onChange={e => toggleTodo(id, e.target.checked)} />
+                    checked={completed} 
+                    onChange={e => toggleTodo(id, e.target.checked)}/>
                 {title}
             </label>
             <button

@@ -16,7 +16,7 @@ const TodoList: FC<TodoListProps> = ({ todos, toggleTodo, deleteTodo }) => {
                     <TodoItem
                         {...todo}
                         key={todo.id}
-                        togleTodo={toggleTodo}
+                        toggleTodo={toggleTodo}
                         deleteTodo={deleteTodo} />
                 )
             })}

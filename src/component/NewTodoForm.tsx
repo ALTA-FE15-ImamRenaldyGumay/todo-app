@@ -9,6 +9,7 @@ const Form: FC<formProps> = ({onSubmit}) => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    if (newItem === "") return
     onSubmit(newItem)
     setNewItem('')
   }
